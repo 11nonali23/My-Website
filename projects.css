@@ -176,7 +176,10 @@ body {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 1391px) {  
+@media (max-width: 1391px) { 
+   .container {
+      justify-content: center;
+   } 
    .card1, .card2, .card3 {
       width: 90%;
    }
