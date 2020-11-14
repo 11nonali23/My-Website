@@ -61,11 +61,6 @@ body {
   transition: transform .8s ease-in-out;
 }
 
-.avatar:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-
 .navigation-links {
   display: flex;
 }
@@ -81,7 +76,7 @@ body {
   color: var(--white);
   transition: color .2s ease;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -96,7 +91,7 @@ body {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fff;
+  background: var(--primary);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
