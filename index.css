@@ -52,11 +52,6 @@ body {
     transition: transform .8s ease-in-out;
 }
 
-.avatar:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
 .navigation-links {
     display: flex;
 }
