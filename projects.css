@@ -175,8 +175,9 @@ body {
    font-weight: bolder;
 }
 
-@media only screen and (max-width: 600px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 1391px) {  
    .card1, .card2, .card3 {
-     width: 100%;
+      width: 90%;
    }
  }
