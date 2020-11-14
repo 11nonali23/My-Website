@@ -1,170 +1,182 @@
 :root {
-    --white: #fff;
-    --black: #000000;
-    --materialBlack: #121212;
-    --grayWhite: #f6f9ff;
-    --lightBlue: #e9efff;
-    --primary: #ed6d22;
-    --darkGray: #2f4f75;
-    --denim: #35465e;
-    --porpoise: #495d74;
-    --coin: #929eac;
-    --cloud: #b6bec7;
-    --salt: #dbdfe3;
-    --lightSalt: #edeff1;
+   --white: #fff;
+   --black: #000000;
+   --materialBlack: #121212;
+   --grayWhite: #f6f9ff;
+   --lightBlue: #e9efff;
+   --primary: #8D0776;
+   --darkGray: #2f4f75;
+   --denim: #35465e;
+   --porpoise: #495d74;
+   --coin: #929eac;
+   --cloud: #b6bec7;
+   --salt: #dbdfe3;
+   --lightSalt: #edeff1;
 }
 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
- 
- body {
-    min-height: 100vh;
-    display: flex;
-    perspective: 1000px;
-    background-color: var(--black);
-    font-family: Euclid Circular B,-apple-system,BlinkMacSystemFont,Helvetica,Arial;
- }
 
- .navigation {
-   position: absolute;
+body {
+   min-height: 100vh;
    display: flex;
-   width: 100%;
-   z-index: 100;
-   align-items: center;
-   justify-content: space-between;
-   z-index: 11;
-   background-color: black;
-   transition: all ease 0.5s;
+   perspective: 1000px;
+   background-color: var(--black);
+   font-family: Euclid Circular B,-apple-system,BlinkMacSystemFont,Helvetica,Arial;
+}
+
+.navigation {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 11;
+  background-color: black;
+  transition: all ease 0.5s;
 }
 
 .navigation-sticky {
-   position: fixed;
-   display: flex;
-   width: 100%;
-   z-index: 100;
-   align-items: center;
-   justify-content: space-between;
-   z-index: 11;
-   background-color: var(--materialBlack);
-   box-shadow: 0 1px 1px 0 var(--primary);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 11;
+  background-color: var(--materialBlack);
+  box-shadow: 0 1px 1px 0 var(--primary);
 }
 
 .avatar {
-   margin: 5px;
-   border-radius: 50%;
-   box-shadow: 0 10px 30px rgba(0,37,132,.06);
-   -webkit-transition: -webkit-transform .8s ease-in-out;
-   transition: transform .8s ease-in-out;
+  margin: 5px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,37,132,.06);
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
 }
 
 .avatar:hover {
-   -webkit-transform: rotate(360deg);
-   transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .navigation-links {
-   display: flex;
+  display: flex;
 }
 
 .navigation .underline {
-   display: inline-block;
-   position: relative;
-   padding: 15px 20px;
-   margin: auto 10px;
-   font-weight: 700;
-   font-size: 15px;
-   line-height: 23px;
-   color: var(--white);
-   transition: color .2s ease;
-   text-decoration: none;
-   color: #fff;
-   text-transform: uppercase;
-   text-decoration: none;
-   letter-spacing: 0.15em;
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  margin: auto 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--white);
+  transition: color .2s ease;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
 }
 
 /* for the unerline effect!*/
 .underline:after {    
-   background: none repeat scroll 0 0 transparent;
-   bottom: 0;
-   content: "";
-   display: block;
-   height: 2px;
-   left: 50%;
-   position: absolute;
-   background: #fff;
-   transition: width 0.3s ease 0s, left 0.3s ease 0s;
-   width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 .underline:hover:after { 
-   width: 100%; 
-   left: 0; 
+  width: 100%; 
+  left: 0; 
 }
 
- .container {
-    width: 100%;
-    display: flex;
-    text-align: center;
-    margin-top: 55px;
- }
+.container {
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   /* margin-top: 55px; */
+   padding: 120px;
+   display: flex;
+   text-align: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
 
- .card, .card2, .card3 {
-    height: 80vh;
-    width: 35rem;
-    border-radius: 30px;
-    padding: 0rem 5rem;
-    margin: 80px;
-    background-color: var(--materialBlack);
-    transform-style: preserve-3d;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px var(--primary);
- }
+.card1, .card2, .card3 {
+   position: relative;
+   height: 80vh;
+   width: 30%;
+   margin-top: 10px;
+   border-radius: 30px;
+   padding: 0rem 5rem;
+   background-color: var(--materialBlack);
+   transform-style: preserve-3d;
+   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px var(--primary);
+}
 
- 
- .awc-logo {
-    min-height: 35vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
 
- .awc-logo img {
-    width: 20rem;
-    z-index: 2;
-    transition: all 0.75s ease-out;
- }
- 
- .info h1 {
-    font-size: 3rem;
-    transition: all 0.75s ease-out;
- }
+.awc-logo {
+   min-height: 35vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 
- .info h3 {
-    padding: 2rem 0rem;
-    margin-top: 2rem;
-    font-weight: lighter;
-    font-size: 1.3rem;
-    color: var(--lightSalt);
-    transition: all 0.75s ease-out;
- }
+.awc-logo img {
+   width: 20rem;
+   z-index: 2;
+   transition: all 0.75s ease-out;
+}
 
- .github {
-    margin-top: 2rem;
-    transition: all 0.75s ease-out;
- }
+.info h1 {
+   font-size: 3rem;
+   transition: all 0.75s ease-out;
+}
 
- .github button {
-    width: 100%;
-    margin: 7px;
-    padding: 1rem 0rem;
-    background: #f54642;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: bolder;
+.info h3 {
+   padding: 2rem 0rem;
+   margin-top: 2rem;
+   font-weight: lighter;
+   font-size: 1.3rem;
+   color: var(--lightSalt);
+   transition: all 0.75s ease-out;
+}
+
+.github {
+   margin-top: 2rem;
+   transition: all 0.75s ease-out;
+}
+
+.github button {
+   width: 100%;
+   margin: 7px;
+   padding: 1rem 0rem;
+   background: #f54642;
+   border: none;
+   color: white;
+   cursor: pointer;
+   border-radius: 30px;
+   font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {
+   .card1, .card2, .card3 {
+     width: 100%;
+   }
  }
