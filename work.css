@@ -1,0 +1,129 @@
+:root {
+    --white: #fff;
+    --black: #000000;
+    --materialBlack: #121212;
+    --grayWhite: #f6f9ff;
+    --lightBlue: #e9efff;
+    --primary: #ed6d22;
+    --darkGray: #2f4f75;
+    --denim: #35465e;
+    --porpoise: #495d74;
+    --coin: #929eac;
+    --cloud: #b6bec7;
+    --salt: #dbdfe3;
+    --lightSalt: #edeff1;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ 
+ body {
+    min-height: 100vh;
+    display: flex;
+    perspective: 1000px;
+    background-color: var(--black);
+    font-family: Euclid Circular B,-apple-system,BlinkMacSystemFont,Helvetica,Arial;
+ }
+
+ .navigation {
+   position: absolute;
+   display: flex;
+   width: 100%;
+   z-index: 100;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 11;
+   background-color: black;
+   transition: all ease 0.5s;
+}
+
+.navigation-sticky {
+   position: fixed;
+   display: flex;
+   width: 100%;
+   z-index: 100;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 11;
+   background-color: var(--materialBlack);
+   box-shadow: 0 1px 1px 0 var(--primary);
+}
+
+.avatar {
+   margin: 5px;
+   border-radius: 50%;
+   box-shadow: 0 10px 30px rgba(0,37,132,.06);
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+   transition: transform .8s ease-in-out;
+}
+
+.avatar:hover {
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+}
+
+.navigation-links {
+   display: flex;
+}
+
+.navigation .underline {
+   display: inline-block;
+   position: relative;
+   padding: 15px 20px;
+   margin: auto 10px;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 23px;
+   color: var(--white);
+   transition: color .2s ease;
+   text-decoration: none;
+   color: var(--white);
+   text-transform: uppercase;
+   text-decoration: none;
+   letter-spacing: 0.15em;
+}
+
+/* for the unerline effect!*/
+.underline:after {    
+   background: none repeat scroll 0 0 transparent;
+   bottom: 0;
+   content: "";
+   display: block;
+   height: 2px;
+   left: 50%;
+   position: absolute;
+   background: var(--white);;
+   transition: width 0.3s ease 0s, left 0.3s ease 0s;
+   width: 0;
+}
+
+.underline:hover:after { 
+   width: 100%; 
+   left: 0; 
+}
+
+.half {
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+h2 {
+    color: var(--white);
+    padding: 50px;
+    margin-top: 10%;
+    font-size: 32px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
