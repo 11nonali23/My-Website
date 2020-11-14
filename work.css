@@ -4,7 +4,7 @@
     --materialBlack: #121212;
     --grayWhite: #f6f9ff;
     --lightBlue: #e9efff;
-    --primary: #8D0776;
+    --primary: #ed6d22;
     --darkGray: #2f4f75;
     --denim: #35465e;
     --porpoise: #495d74;
@@ -61,6 +61,11 @@
    transition: transform .8s ease-in-out;
 }
 
+.avatar:hover {
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+}
+
 .navigation-links {
    display: flex;
 }
@@ -91,7 +96,7 @@
    height: 2px;
    left: 50%;
    position: absolute;
-   background: var(--primary);
+   background: var(--white);;
    transition: width 0.3s ease 0s, left 0.3s ease 0s;
    width: 0;
 }
