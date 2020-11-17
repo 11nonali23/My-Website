@@ -110,6 +110,8 @@ body {
    display: flex;
    text-align: center;
    flex-wrap: wrap;
+   /*add gap when wrapping*/
+   gap: 80px;
    justify-content: space-between;
 }
 
